@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Ingrese sus numeros</h1>
+        <form id="formulario">
+            <div>
+                <span>
+                    <label>1er Número</label>
+
+                    <input id="numerouno" placeholder="Numero Positivo" type="number">
+                </span>
+            </div>
+            <div>
+                <span>
+                    <label>2do Número</label>
+
+                    <input id="numerodos" placeholder="Numero Positivo" type="number">
+                </span>
+            </div>
+
+
+            <section class="Grid Grid--gutters Grid--cols-2 u-textCenter">
+
+                <div class="Grid-cell">
+                    <div class="visibleCell">
+                        <p>
+                            Hallar el menor de dos numeros enteros positivos
+                        </p>
+                        <div class="imagen">
+                            <img id="img1" src="images/comparacion.png">
+                        </div>
+                        <div id="resultado1">
+
+                        </div>
+
+
+                        <button class="button" onclick="Comparar(1)">
+                            Ver Resultado
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="Grid-cell">
+                    <div class="visibleCell">
+                        <p>
+                            Determinar si los numeros ingresados son iguales
+                        </p>
+                        <div class="imagen">
+                            <img id="img2" src="images/igual.png">
+                        </div>
+                        <div id="resultado2">
+
+                        </div>
+
+
+                        <button class="button" onclick="EsIgual(2)">
+                            Ver Resultado
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="Grid Grid--gutters Grid--cols-2 u-textCenter">
+
+
+                <div class="Grid-cell">
+                    <div class="visibleCell">
+
+                        <p>
+                            Intercambiar los valores de los numeros
+                        </p>
+                        <div class="imagen">
+
+                            <img id="img3" src="images/intercambio.png">
+                        </div>
+
+
+
+                        <div id="resultado3">
+
+                        </div>
+
+
+                        <button class="button" onclick="Intercambiar(3)">
+                            Ver Resultado
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="Grid-cell">
+                    <div class="visibleCell">
+                        <p>
+                            Sumar los dos numeros
+                        </p>
+                        <div class="imagen">
+                            <img id="img4" src="images/suma.gif">
+                        </div>
+                        <div id="resultado4">
+
+                        </div>
+
+
+                        <button class="button" onclick="Sumar(4)">
+                            Ver Resultado
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+        </form>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
