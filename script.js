@@ -39,6 +39,13 @@ function nomostrar() {
 
 
 }
+function convertirArreglo(params) {
+    let myFunc = num => Number(num);
+  
+    var intArr = Array.from(String(params), myFunc);
+    return intArr;
+    
+}
 function CapturarNumeros() {
 
     numerouno = Number(document.querySelector("#numerouno").value);
@@ -62,10 +69,15 @@ function EsIgual(x) {
         let val = CapturarNumeros();
         if (val) {
             let dato = ""
-            if (numerouno == numerodos) {
+            
+  
+            var intArr = convertirArreglo(numerouno)
+           
+            if (intArr.includes(numerodos)) {
                 dato = "Son iguales"
             }
-            if (numerouno != numerodos) {
+
+            if (!intArr.includes(numerodos)) {
                 dato = "No son iguales"
             }
 
@@ -95,10 +107,11 @@ function Sumar(x) {
         llenarVectores();
         let val = CapturarNumeros();
         if (val) {
-            let suma = numerouno + numerodos;
+         
+            numerouno+=numerodos       
 
             resultados[x].style.cssText = "display:block"
-            resultados[x].textContent = "La suma es " + suma;
+            resultados[x].textContent = "La suma es " + numerouno;
             resultados[x].style.cssText += "margin:auto";
             imagenes[x].style.cssText = "display:none";
             let boton = resultados[x].nextElementSibling;
@@ -153,13 +166,9 @@ function Comparar(x) {
         llenarVectores();
         let val = CapturarNumeros();
         if (val) {
-            let menor = 0;
-            if (numerouno > numerodos) {
-                menor = numerodos;
-            }
-            if (numerouno < numerodos) {
-                menor = numerouno;
-            }
+            let menor = Math.min(numerouno, numerodos);
+           
+
 
             resultados[x].style.cssText = "display:block"
             resultados[x].textContent = "El menor es " + menor;
