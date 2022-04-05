@@ -177,7 +177,7 @@ function Comparar(x) {
             let boton = resultados[x].nextElementSibling;
             boton.textContent = "Ocultar Resultado";
             estado[x] = true;
-
+ 
         }
 
 
