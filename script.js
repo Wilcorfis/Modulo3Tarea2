@@ -40,9 +40,7 @@ function nomostrar() {
 
 }
 function convertirArreglo(params) {
-    let myFunc = num => Number(num);
-  
-    var intArr = Array.from(String(params), myFunc);
+    var intArr = [params]
     return intArr;
     
 }
@@ -108,10 +106,10 @@ function Sumar(x) {
         let val = CapturarNumeros();
         if (val) {
          
-            numerouno+=numerodos       
+            let suma=numerouno-(-numerodos)       
 
             resultados[x].style.cssText = "display:block"
-            resultados[x].textContent = "La suma es " + numerouno;
+            resultados[x].textContent = "La suma es " + suma;
             resultados[x].style.cssText += "margin:auto";
             imagenes[x].style.cssText = "display:none";
             let boton = resultados[x].nextElementSibling;
